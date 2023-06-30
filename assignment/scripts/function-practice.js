@@ -14,11 +14,21 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-// function helloName(name) {
-//   return ;
-// }
-// // Remember to call the function to test
-// console.log('Test name = Hannah', helloName(Hannah))
+let names = [];
+function helloName(newName) {
+  console.log('Hello,', newName,'!');
+  //push new name into our names array
+names.push(newName);
+return names;
+}
+
+helloName( 'Hannah');
+helloName( 'Vinny' );
+helloName( 'Dude' );
+
+// Remember to call the function to test
+console.log('Its nice to meet you', names);
+
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
@@ -66,7 +76,11 @@ console.log('isPositive - should say false', isPositive(-3));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let array = [];
 function getLast(array) {
+  if (array.indexOf(array.length) === array.length){
+    console.log('The last item is:', array());
+  }
 
 }
 
