@@ -16,19 +16,20 @@ console.log('Test - should say "Hello World!"', hello());
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 let names = [];
 function helloName(newName) {
-  console.log('Hello,', newName,'!');
+  console.log('learned new name:', newName);
   //push new name into our names array
 names.push(newName);
-return names;
+//once addition is confirmed in array send greeting
+let greeting = console.log('Hello,', newName, '!');
+return greeting;
 }
 
+// Remember to call the function to test
 helloName( 'Hannah');
 helloName( 'Vinny' );
 helloName( 'Dude' );
 
-// Remember to call the function to test
-console.log('Its nice to meet you', names);
-
+console.log('New names learned are:', names)
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
@@ -76,19 +77,27 @@ console.log('isPositive - should say false', isPositive(-3));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-let array = [];
-function getLast(array) {
-  if (array.indexOf(array.length) === array.length){
-    console.log('The last item is:', array());
-  }
+let array = ['notebook', 'pencil', 'glue', 'earaser'];
 
+function getLast(array) {
+  let lastItem = array[array.length-1];
+  return lastItem;
 }
+
+console.log('The last item is:', getLast())
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
+let arrayBeingSearched = [];
 
+function find(value, array) {
+if (value == array){
+  console.log('In find, these match:')
+  return true;
+}
+else {console.log('Nope not here');
+return false;}
 }
 
 // ----------------------
