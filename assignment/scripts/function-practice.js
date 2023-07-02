@@ -92,11 +92,17 @@ console.log('Last item in array is:', getLast())
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 const testArray = [1, 5, 15, 57, 9];
 function find(value) {
-if (value == testArray){
+  for (let i=0; i<testArray.length; i++);
+  for (number of testArray)
+if (value == number){
   return true;}
+  else 
+  return false;
 }
 
-console.log('This should be True,', find(9))
+console.log('This should be true in find,', find(9));
+console.log('This should be false in find,', find(100));
+console.log('This should be true in find,', find(1));
 
 // ----------------------
 // Stretch Goals
