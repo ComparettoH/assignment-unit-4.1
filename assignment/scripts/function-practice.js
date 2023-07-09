@@ -20,12 +20,11 @@ function helloName(newName) {
   //push new name into our names array
 names.push(newName);
 //once addition is confirmed in array send greeting
-let greeting = console.log('Hello,', newName, '!');
-return greeting;
+return 'Hello, ' + newName + '!';
 }
 
 // Remember to call the function to test
-helloName( 'Hannah');
+console.log(helloName( 'Hannah'));
 helloName( 'Vinny' );
 helloName( 'Dude' );
 
@@ -92,17 +91,16 @@ console.log('Last item in array is:', getLast())
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 const testArray = [1, 5, 15, 57, 9];
 function find(value) {
-  for (let i=0; i<testArray.length; i++);
-  for (number of testArray)
-if (value == number){
-  return true;}
-  else 
-  return false;
+for (let i=0; i<testArray.length; i++){
+  console.log('for testArray loop,', testArray[i])
+}
 }
 
-console.log('This should be true in find,', find(9));
-console.log('This should be false in find,', find(100));
-console.log('This should be true in find,', find(1));
+find()
+
+console.log('This should be true in find,', find(57));
+console.log('This should be false in find,', find(99));
+console.log('This should be true in find,', find(57));
 
 // ----------------------
 // Stretch Goals
