@@ -18,41 +18,41 @@ let names = [];
 function helloName(newName) {
   console.log('learned new name:', newName);
   //push new name into our names array
-names.push(newName);
-//once addition is confirmed in array send greeting
-return 'Hello, ' + newName + '!';
+  names.push(newName);
+  //once addition is confirmed in array send greeting
+  return 'Hello, ' + newName + '!';
 }
 
 // Remember to call the function to test
-console.log(helloName( 'Hannah'));
-helloName( 'Vinny' );
-helloName( 'Dude' );
+console.log(helloName('Hannah'));
+helloName('Vinny');
+helloName('Dude');
 
 console.log('New names learned are:', names)
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
-console.log('in addNumbers', firstNumber, secondNumber );
-let answer = firstNumber + secondNumber;
-return answer;
+  console.log('in addNumbers', firstNumber, secondNumber);
+  let answer = firstNumber + secondNumber;
+  return answer;
 }
 
-console.log('Test 22 + 3 =', addNumbers(22,3))
-console.log('Test -9 + 37 =', addNumbers(-9,37))
-console.log('Test 3.14 + 87 =', addNumbers(3.14,87))
-console.log('Test 5 + -100 =', addNumbers(5,-100))
+console.log('Test 22 + 3 =', addNumbers(22, 3))
+console.log('Test -9 + 37 =', addNumbers(-9, 37))
+console.log('Test 3.14 + 87 =', addNumbers(3.14, 87))
+console.log('Test 5 + -100 =', addNumbers(5, -100))
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(num1, num2, num3) {
-console.log('in multiplyThree:', num1, num2, num3);
-let answer = num1 * num2 * num3;
-return answer;
+  console.log('in multiplyThree:', num1, num2, num3);
+  let answer = num1 * num2 * num3;
+  return answer;
 }
 
-console.log('Test 2x5x8 =', multiplyThree(2,5,8))
-console.log('Test 1x0x9 =', multiplyThree(1,0,9))
-console.log('Test 3x7x9 =', multiplyThree(3,7,9))
-console.log('Test 11x6x4 =', multiplyThree(11,6,4))
+console.log('Test 2x5x8 =', multiplyThree(2, 5, 8))
+console.log('Test 1x0x9 =', multiplyThree(1, 0, 9))
+console.log('Test 3x7x9 =', multiplyThree(3, 7, 9))
+console.log('Test 11x6x4 =', multiplyThree(11, 6, 4))
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -61,7 +61,7 @@ function isPositive(number) {
     console.log('This', number, 'is positive')
     return true;
   }
-  else if (number <= 0){
+  else if (number <= 0) {
     console.log('This', number, 'is negative or zero.')
   }
   return false;
@@ -76,30 +76,34 @@ console.log('isPositive - should say false', isPositive(-3));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-let array = [ 'paper', 'notebook', 'pen', 'eraser'];
+let testArray = ['paper', 'notebook', 'pen', 'eraser'];
 
 function getLast(array) {
-  let lastItem = array[array.length-1];
+  let lastItem = array[array.length - 1];
   return lastItem;
 }
 
-console.log('Last item in array is:', getLast(array))
+console.log('Last item in array is:', getLast(testArray))
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-const testArray = [1, 5, 15, 57, 9];
-function find(value) {
-for (let i=0; i<testArray.length; i++){
-  console.log('for testArray loop,', testArray[i])
-}
+
+function find(item, array) {
+  for (let i = 0; i < array.length; i++) {
+    if (item == array[i]) {
+      console.log(item, 'is a match!')
+      return true;
+    }
+  //   else
+  //   return false;
+  }
 }
 
-find()
 
-console.log('This should be true in find,', find(57));
-console.log('This should be false in find,', find(99));
-console.log('This should be true in find,', find(57));
+console.log('This should be false in find,', find(4, [1, 12, 57]));
+console.log('This should be true in find,', find(86, [0, 245, 86, 0, 54]));
+console.log('This should be true in find,', find(9, [80, 90, 95, 9]));
 
 // ----------------------
 // Stretch Goals
